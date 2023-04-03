@@ -1,0 +1,62 @@
+body{
+    background: rgb(203, 206, 255);
+}
+.table1 {
+    background: rgb(255, 0, 255);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 700px;
+}
+.table2 {
+    background: rgb(0, 238, 255);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 700px;
+}
+.table3 {
+    background: rgb(123, 255, 0);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 700px;
+}
+img {
+    border-radius: 50px;
+}
+h3{
+    margin-left: 50px;
+}
+img{
+    margin-left: 10px;
+}
+button {
+    margin-left: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    background: black;
+    color: white;
+    margin-bottom: 10px;
+}
+p{  
+    margin-top: 30px;
+    margin-left: 10px;
+    color: black;
+}
+.tovary{
+    color: black;
+    font-size: 30px;
+}
+div{
+    margin-left: 50px;
+}
+.menuA {
+    margin-left: 10px;
+    color: #FFF;
+}
+.menu {
+    border:6px solid black;
+    background-color: rgb(12, 2, 104);
+    margin-bottom: 10px;
+    width: 350px;
+}
