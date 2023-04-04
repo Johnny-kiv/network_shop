@@ -58,7 +58,7 @@ div{
     border:6px solid black;
     background-color: rgb(12, 2, 104);
     margin-bottom: 10px;
-    width: 300px;
+    width: 200px;
 }
 .filter{
     border-radius: 20px;
@@ -70,4 +70,11 @@ div{
     font-size: 22px;
     margin-right: 100px;
     margin-top: 20px;
+}
+.zakupki{
+    background-color: #fb8cf7;
+    border-radius: 20px;
+}
+.td{
+    border-bottom: 4px dashed rgb(0, 0, 0);
 }
