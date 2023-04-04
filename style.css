@@ -60,3 +60,14 @@ div{
     margin-bottom: 10px;
     width: 300px;
 }
+.filter{
+    border-radius: 20px;
+    background: rgb(0, 251, 255);
+    width: 360px;
+    height: 300px;
+}
+.filter div{
+    font-size: 22px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
