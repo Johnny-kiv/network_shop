@@ -1,5 +1,5 @@
 body{
-    background: rgb(203, 206, 255);
+    background: url(bg.gif);
 }
 .table1 {
     background: rgb(255, 0, 255);
@@ -77,4 +77,7 @@ div{
 }
 .td{
     border-bottom: 4px dashed rgb(0, 0, 0);
+}
+.cont{
+
 }
