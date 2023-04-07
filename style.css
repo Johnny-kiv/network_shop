@@ -1,30 +1,26 @@
 body{
-    background: rgb(0, 6, 52);
+    background: rgb(0,0,0);
 }
 .table1 {
-    background: rgb(0, 10, 100);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+    background: rgb(255, 0, 255);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
 }
 .table2 {
-    background: rgb(0, 10, 100);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+    background: rgb(0, 238, 255);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
 }
 .table3 {
-    background: rgb(0, 10, 100);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+    background: rgb(123, 255, 0);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
 }
 .table4 {
-    background: rgb(0, 10, 100);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+    background: rgb(255, 255, 123);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
@@ -54,7 +50,7 @@ p{
     color: black;
 }
 .tovary{
-    color: rgb(168, 195, 247);
+    color: black;
     font-size: 30px;
 }
 div{
@@ -65,22 +61,20 @@ div{
     color: #FFF;
 }
 .menu {
-    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
-    border-radius: 10px;
+    border:6px solid black;
     background-color: rgb(12, 2, 104);
     margin-bottom: 10px;
     width: 250px;
 }
 .filter{
     border-radius: 20px;
-    background: rgb(0, 10, 100);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+    background: rgb(0, 251, 255);
     width: 400px;
     height: 300px;
 }
 .filter div{
     font-size: 22px;
-    margin-left: 100px;
+    margin-right: 100px;
     margin-top: 20px;
 }
 .zakupki{
@@ -92,13 +86,4 @@ div{
 }
 .cont{
 
-}
-a{
-    color:white
-}
-h1 {
-    color: #b9c2ff;
-}
-.f{
-    margin-right: 100px;
 }

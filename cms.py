@@ -41,8 +41,8 @@ for line in lines:
         <td>
             <p style="font-size: 40px;color:white">{line[2]} р.</p>
             <button>В корзину</button>
-        </td>
-    </tr>
+        </td> 
+    </tr>    
 </table>
 """
     inp.write(res)
