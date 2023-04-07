@@ -24,7 +24,7 @@ inp.write("""
 for row in cur.execute("SELECT * from Tovary"):
     lines.append(row)
 for line in lines:
-    res = f"""<table class="table{random.randint(1,3)}">
+    res = f"""<table class="table{random.randint(1,4)}">
     <tr>
         <td rowspan="3">
             <h3><a class ="tovary" href = "#">{line[0]}</a></h3>
