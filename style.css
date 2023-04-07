@@ -1,26 +1,29 @@
 body{
-    background: rgb(0,0,0);
+    background: rgb(0, 2, 47);
 }
 .table1 {
-    background: rgb(255, 0, 255);
+    background: rgb(0, 3, 105);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
 }
 .table2 {
-    background: rgb(0, 238, 255);
+    background: rgb(0, 3, 105);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
 }
 .table3 {
-    background: rgb(123, 255, 0);
+    background: rgb(0, 3, 105);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
 }
 .table4 {
-    background: rgb(255, 255, 123);
+    background: rgb(0, 3, 105);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;
@@ -61,14 +64,17 @@ div{
     color: #FFF;
 }
 .menu {
-    border:6px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
     background-color: rgb(12, 2, 104);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
     margin-bottom: 10px;
     width: 250px;
 }
 .filter{
     border-radius: 20px;
-    background: rgb(0, 251, 255);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    background: rgb(0, 3, 105);
     width: 400px;
     height: 300px;
 }
@@ -86,4 +92,14 @@ div{
 }
 .cont{
 
+}
+.tovary{
+    color: rgb(188, 209, 255);
+}
+a{
+    color: rgb(188, 209, 255);
+
+}
+h1{
+    color: rgb(188, 209, 255);
 }
