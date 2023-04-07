@@ -20,6 +20,14 @@ inp.write("""
         <table>
             <tr>
                 <td>
+                    <h1 style="margin-left: 50px;">Категории</h1>
+                    <div style="margin-right: 50px;" class = "filter">
+                    <div>
+                    <a href="">Мышки</a><br><a href="">Чехлы</a><br><a href="">Пульты</a><br><a href="">Arduino</a><br><a href="">Компьтеры</a><br><a href="">Телефоны</a><br><a href="">Кнопочные телефоны</a><br><a href="">Акамуляторы</a><br><a href="">Часы</a><br><a href="">Сломанное</a><br><a href="">Другое</a>
+                    </div>
+                    </div>
+                    </td>
+                <td>
 """)
 for row in cur.execute("SELECT * from Tovary"):
     lines.append(row)
@@ -31,7 +39,7 @@ for line in lines:
             <img src="{line[1]}" width = 300>
         </td>
         <td>
-            <p style="font-size: 40px;color:rgb(164, 0, 0);">{line[2]} р.</p>
+            <p style="font-size: 40px;color:white">{line[2]} р.</p>
             <button>В корзину</button>
         </td>
     </tr>
@@ -39,14 +47,6 @@ for line in lines:
 """
     inp.write(res)
 footh = """</td>
-<td>
-<h1 style="margin-left: 300px;">Категории</h1>
-<div class = "filter" style="margin-left: 300px;">
-<div>
-<a href="">Мышки</a><br><a href="">Чехлы</a><br><a href="">Пульты</a><br><a href="">Arduino</a><br><a href="">Компьтеры</a><br><a href="">Телефоны</a><br><a href="">Кнопочные телефоны</a><br><a href="">Акамуляторы</a><br><a href="">Часы</a><br><a href="">Сломанное</a><br><a href="">Другое</a>
-</div>
-</div>
-</td>
 </tr>
 </table>
 </div>
