@@ -3,7 +3,7 @@ import sqlite3
 conn = sqlite3.connect("tovary.db")
 cur = conn.cursor()
 lines = []
-inp = open('index.html',"w")
+inp = open('templates/index.html', "w")
 inp.write("""
 <!DOCTYPE html>
 <html lang="en">
