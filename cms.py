@@ -1,56 +1,40 @@
-import random
+from aiogram import Bot,Dispatcher,executor,types
+from aiogram.types import ReplyKeyboardMarkup,KeyboardButton
 import sqlite3
+insert = KeyboardButton("insert")
+select = KeyboardButton("select")
+mainM = ReplyKeyboardMarkup(resize_keyboard=True).add(insert,select)
+bot = Bot(token="6021724545:AAHY5UvQ2ttRGnazCJH2ZlVXI_oORAZbnIA")
+dp = Dispatcher(bot=bot)
 conn = sqlite3.connect("tovary.db")
 cur = conn.cursor()
-lines = []
-inp = open('templates/index.html', "w")
-inp.write("""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/style.css">
-    <title>Барахолка</title>
-</head>
-<body>
-    <div class="menu"><a class="menuA" href="index.html">Главная</a><a class="menuA" href="shopping.html">Корзина</a><a class="menuA"href="about.html">О нас</a></div>
-    <div>
-        <table>
-            <tr>
-                <td>
-                    <h1 style="margin-left: 50px;">Категории</h1>
-                    <div style="margin-right: 50px;" class = "filter">
-                    <div>
-                    <a href="">Мышки</a><br><a href="">Чехлы</a><br><a href="">Пульты</a><br><a href="">Arduino</a><br><a href="">Компьтеры</a><br><a href="">Телефоны</a><br><a href="">Кнопочные телефоны</a><br><a href="">Акамуляторы</a><br><a href="">Часы</a><br><a href="">Сломанное</a><br><a href="">Другое</a>
-                    </div>
-                    </div>
-                    </td>
-                <td>
-""")
-for row in cur.execute("SELECT * from Tovary"):
-    lines.append(row)
-for line in lines:
-    res = f"""<table class="table{random.randint(1,4)}">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">{line[0]}</a></h3>
-            <img src="{line[1]}" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">{line[2]} р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-"""
-    inp.write(res)
-footh = """</td>
-</tr>
-</table>
-</div>
-</body>
-</html>
-"""
-inp.write(footh)
+global flag
+flag = 2
+@dp.message_handler(commands=['start'])
+async def start(mes: types.Message):
+    await bot.send_message(mes.from_user.id,text=f"Здравствуйте {mes.from_user.first_name}! Добро пожаловать в компанию Барахолка. Мы предстовляем собой интернет магазмн. Здесь каждый может стать продавцом и продовая все что хочет (кроме оружия). Так что начните свой бизнес здесь! Безопасно удобно и выгодно. Удачи!",reply_markup=mainM)
+@dp.message_handler()
+async def handler1(mes: types.Message):
+    global name, flag
+    if mes.text == "insert":
+        if flag==2:
+            await bot.send_message(mes.from_user.id, "Введите название товара:", reply_markup=mainM)
+            flag = 0
+@dp.message_handler()
+async def handler2(mes: types.Message):
+    global price, flag, name
+    if flag==0:
+        await bot.send_message(mes.from_user.id, "Введите цену товара:", reply_markup=mainM)
+        name = mes.text
+        flag = 1
+
+@dp.message_handler()
+async def handler3(mes: types.Message):
+    global price, flag, name
+    if flag==1:
+        price = mes.text
+        flag = 2
+    data = [name, price, None,None]
+    cur.execute("INSERT INTO Tovary VALUES(?, ?, ?,?);", data)
+    conn.commit()
+executor.start_polling(dp,skip_updates=True)

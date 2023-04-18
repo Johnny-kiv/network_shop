@@ -1,29 +1,9 @@
 body{
     background: rgb(0, 2, 47);
 }
-.table1 {
+.table{
     background: rgb(0, 3, 105);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    border-radius: 50px;
-    margin-bottom: 10px;
-    width: 750px;
-}
-.table2 {
-    background: rgb(0, 3, 105);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
-    border-radius: 50px;
-    margin-bottom: 10px;
-    width: 750px;
-}
-.table3 {
-    background: rgb(0, 3, 105);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
-    border-radius: 50px;
-    margin-bottom: 10px;
-    width: 750px;
-}
-.table4 {
-    background: rgb(0, 3, 105);
     border-radius: 50px;
     margin-bottom: 10px;
     width: 750px;

@@ -9,130 +9,40 @@
     <title>Барахолка</title>
 </head>
 <body>
-    <div class="menu"><a class="menuA" href="index.html">Главная</a><a class="menuA" href="shopping.html">Корзина</a><a class="menuA"href="about.html">О нас</a></div>
-    <div>
-        <table>
-            <tr>
-                <td>
-                    <h1 style="margin-left: 50px;">Категории</h1>
-                    <div style="margin-right: 50px;" class = "filter">
-                    <div>
-                    <a href="">Мышки</a><br><a href="">Чехлы</a><br><a href="">Пульты</a><br><a href="">Arduino</a><br><a href="">Компьтеры</a><br><a href="">Телефоны</a><br><a href="">Кнопочные телефоны</a><br><a href="">Акамуляторы</a><br><a href="">Часы</a><br><a href="">Сломанное</a><br><a href="">Другое</a>
-                    </div>
-                    </div>
-                    </td>
-                <td>
-<table class="table2">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Чехол от телефона ASUS</a></h3>
-            <img src="/static/imgs/tovary3.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">999 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table2">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Microsoft беспроводная мышка</a></h3>
-            <img src="/static/imgs/tovary4.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">2000 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table1">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Проводная мышка Logitech</a></h3>
-            <img src="/static/imgs/tovary2.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">1200 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table4">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Microsoft беспроводная мышка	</a></h3>
-            <img src="/static/imgs/tovary4.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">2000 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table4">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Проводная мышка Logitech</a></h3>
-            <img src="/static/imgs/tovary2.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">1200 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table4">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Пульт от кондиционера McQuay</a></h3>
-            <img src="/static/imgs/tovary1.jpg " width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">1000 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table2">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Пульт от кондиционера McQuay</a></h3>
-            <img src="/static/imgs/tovary1.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">1000 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table4">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Чехол от телефона ASUS</a></h3>
-            <img src="/static/imgs/tovary3.jpg" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">999 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
-<table class="table3">
-    <tr>
-        <td rowspan="3">
-            <h3><a class ="tovary" href = "#">Microsoft игровая мышка</a></h3>
-            <img src="/static/imgs/tovary5.webp" width = 300>
-        </td>
-        <td>
-            <p style="font-size: 40px;color:white">2500 р.</p>
-            <button>В корзину</button>
-        </td> 
-    </tr>    
-</table>
+<div class="menu"><a class="menuA" href="index.html">Главная</a><a class="menuA" href="shopping.html">Корзина</a><a class="menuA"href="about.html">О нас</a></div
+
+<div>
+    <table>
+<tr>
+<td>
+<div>
+<h1 style="margin-left: 50px;">Категории</h1>
+<div style="margin-right: 50px;" class = "filter">
+<div>
+<a href="">Мышки</a><br><a href="">Чехлы</a><br><a href="">Пульты</a><br><a href="">Arduino</a><br><a href="">Компьтеры</a><br><a href="">Телефоны</a><br><a href="">Кнопочные телефоны</a><br><a href="">Акамуляторы</a><br><a href="">Часы</a><br><a href="">Сломанное</a><br><a href="">Другое</a>
+</div>
+</div>
+</div>
 </td>
+<td>
+{% for res in res_list %}
+<table class="table">
+    <tr>
+        <td rowspan="3">
+            <h3><a class ="tovary" href = "#">{{res.name}}</a></h3>
+            <img src="{{res.image}}" width = 300>
+        </td>
+        <td>
+            <p style="font-size: 40px;color:white">{{res.price}} р.</p>
+            <button>В корзину</button>
+        </td>
+    </tr>
+</table>
+{% endfor %}
+        </td>
 </tr>
 </table>
 </div>
+
 </body>
 </html>
